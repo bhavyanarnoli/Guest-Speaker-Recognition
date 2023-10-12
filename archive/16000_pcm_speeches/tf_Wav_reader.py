@@ -227,16 +227,16 @@ def get_unprocessed_data(self, how_many, model_settings, mode):
     words_list = self.words_list
     data = np.zeros((sample_count, desired_samples))
     labels = []
-        wav_loader = io_ops.read_file(wav_filename)
-        wav_decoder = tf.audio.decode_wav(
-            wav_loader, desired_channels=1, desired_samples=desired_samples)
-        scaled_foreground = tf.multiply(wav_decoder.audio,
+    wav_loader = io_ops.read_file(wav_filename)
+    wav_decoder = tf.audio.decode_wav(
+    wav_loader, desired_channels=1, desired_samples=desired_samples)
+    scaled_foreground = tf.multiply(wav_decoder.audio,
                                         foreground_volume)
-        for i in range(sample_count):
-            if how_many == -1:
-                sample_index = i
-            else:
-                sample_index = np.random.randint(len(candidates))
+    for i in range(sample_count):
+        if how_many == -1:
+            sample_index = i
+        else:
+            sample_index = np.random.randint(len(candidates))
             sample = candidates[sample_index]
             input_dict = {wav_filename_placeholder: sample['file']}
             if sample['label'] == SILENCE_LABEL:
