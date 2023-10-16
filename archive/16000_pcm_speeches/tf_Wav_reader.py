@@ -4,7 +4,7 @@ from tensorflow.python.ops import io_ops
 import librosa
 import librosa.display
 from spela.spectrogram import Spectrogram
-
+import os
 tf.executing_eagerly()
 wav_dir = "Benjamin_Netanyau/0.wav"
 print(wav_loader)
