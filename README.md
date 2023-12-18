@@ -54,5 +54,5 @@ Model-2: SVM(RBF Kernel) - Features {mfcc, delta mfcc, ldb}, Accuracy {97.33%} [
 
 Model-3: GMM - Features {mfcc, delta mfcc , delta delta mfcc}, Accuracy {99.08%}
 
-Finally, if any audio of above speakers needs to be tested on the gmm_models , it can be tested running the script  [code](running_script.py) GMM model code and result
+Finally, if any audio of above speakers needs to be tested on the gmm_models , it can be tested running the script  [code](running_script.ipynb) GMM model code and result
 
