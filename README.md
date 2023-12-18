@@ -10,7 +10,7 @@ Given an audio identify the speaker from the following: Benjamin Netanyau , Jens
 Background Noise folder along with sound of 5 speaker , have to identify the speaker of the audio.
 Classes are balanced  ( 1500 audio files in each class ) 
 
-### Audio Augmentation
+## Audio Augmentation
 
 - Time Stretching: Time stretching is employed to alter the duration of audio signals, creating temporal variations.
 
@@ -20,9 +20,9 @@ Classes are balanced  ( 1500 audio files in each class )
 
 - Other Speaker Voices as Noise: The other speaker voices are added as a background noise, providing additional diversity in the dataset.
 
-### Feature Extraction
+## Feature Extraction
 
-#### MFCC : 
+### MFCC : 
 Represents the short-term power spectrum, emphasizing perceptually relevant frequency components.
 Involves framing the signal, windowing, FFT computation, processing through a Mel filter bank, logarithm, and DCT application.
 Provides a compact representation capturing overall spectral characteristics for analysis.
@@ -41,7 +41,7 @@ Quantifies energy distribution across frequency bands, enhancing discriminatory 
 Analyzes specific frequency regions in the frequency domain.
 
 
-#### Result
+## Result
 
 Testing and Model Selection
 Data Splitting → Testing has been performed on augmenting the 20% split of clean data.
