@@ -6,37 +6,37 @@ Given an audio identify the speaker from the following: Benjamin Netanyau , Jens
 
 ### Link to dataset: [link](https://www.kaggle.com/datasets/kongaevans/speaker-recognition-dataset)
 
-#### Dataset Description : 
+### Dataset Description : 
 Background Noise folder along with sound of 5 speaker , have to identify the speaker of the audio.
 Classes are balanced  ( 1500 audio files in each class ) 
 
-#### Audio Augmentation
+### Audio Augmentation
 
-Time Stretching: Time stretching is employed to alter the duration of audio signals, creating temporal variations.
+- Time Stretching: Time stretching is employed to alter the duration of audio signals, creating temporal variations.
 
-Background Noise: Background noises are added using audiomentations, introducing the noises given to us inside the ‘_background_noises_’ folder.
+- Background Noise: Background noises are added using audiomentations, introducing the noises given to us inside the ‘_background_noises_’ folder.
 
-Gaussian White Noise: Gaussian white noise is added to simulate random noise, enhancing resilience to unexpected sound conditions, making model robust.
+- Gaussian White Noise: Gaussian white noise is added to simulate random noise, enhancing resilience to unexpected sound conditions, making model robust.
 
-Other Speaker Voices as Noise: The other speaker voices are added as a background noise, providing additional diversity in the dataset.
+- Other Speaker Voices as Noise: The other speaker voices are added as a background noise, providing additional diversity in the dataset.
 
-#### Feature Extraction
+### Feature Extraction
 
- MFCC : 
+#### MFCC : 
 Represents the short-term power spectrum, emphasizing perceptually relevant frequency components.
 Involves framing the signal, windowing, FFT computation, processing through a Mel filter bank, logarithm, and DCT application.
 Provides a compact representation capturing overall spectral characteristics for analysis.
 
-Delta MFCC : 
+#### Delta MFCC : 
 Captures changes in spectral characteristics over time, offering insights into speech spectrum evolution.
 Provides a dynamic representation of a speaker's voice by focusing on subtle changes in speech dynamics.
 Helps differentiate unique voice features accurately for speaker recognition.
 
-Delta Delta MFCC: 
+#### Delta Delta MFCC: 
 Complements Delta MFCC by capturing acceleration in changes to vocal characteristics.
 Enhances system precision in capturing variations in speech of different speakers by addressing changes and accelerations.
 
-LDB: 
+#### LDB: 
 Quantifies energy distribution across frequency bands, enhancing discriminatory power in speaker recognition.
 Analyzes specific frequency regions in the frequency domain.
 
